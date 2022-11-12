@@ -26,7 +26,7 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #79c9f7;
   color: rgb(255, 255, 255);
 }
 
@@ -38,31 +38,67 @@ body {
 .topnav .icon {
   display: none;
 }
-
-.btn {
-	background: #eb94d0;
-  background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);  
-  background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);  
-  background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);  
-  background-image: -o-linear-gradient(top, #eb94d0, #2079b0);  
-  background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
-  -webkit-border-radius: 28;  
-  -moz-border-radius: 28;  
-  border-radius: 28px;
-text-shadow: 3px 2px 1px #9daef5;  
--webkit-box-shadow: 6px 5px 24px #666666;  
--moz-box-shadow: 6px 5px 24px #666666;  
-box-shadow: 6px 5px 24px #666666;
-font-family: Arial;  
-color: #fafafa;  font-size: 27px;  padding: 19px;  text-decoration: none;
+body {
+  background-color: #0A2344;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+}
+ 
+h1 {
+  text-align: center;
 }
 
-.btn:hover {
-  background: #2079b0;
-  background-image: -webkit-linear-gradient(top, #2079b0, #eb94d0);
-  background-image: -moz-linear-gradient(top, #2079b0, #eb94d0);
-  background-image: -ms-linear-gradient(top, #2079b0, #eb94d0);
-  background-image: -o-linear-gradient(top, #2079b0, #eb94d0); 
-  background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
-  text-decoration: none;
+.accordion {
+  width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-color: #79c9f7;
+  padding: 45px 45px;
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: '+';
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+
+.accordion .content {
+  position: relative;
+  background: #79c9f7;
+  height: 0;
+  font-size: 20px;
+  text-align: justify;
+  width: 780px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.accordion hr {
+  width: 100;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+.accordion .container.active .content {
+  height: 150px;
+}
+
+.accordion .container.active .label::before {
+  content: '-';
+  font-size: 30px;
 }
