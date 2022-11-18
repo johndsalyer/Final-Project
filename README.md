@@ -6,3 +6,5 @@ This is my first coding project. I used 2 media inquires to change the page layo
 -I have included a nav menu with javascript
 
 -I have also included accordion boxes with css and javascript
+
+-I have ran a PageSpeed Insights test with the results being: Performance 100, Accessibility 81, Best Practices 92, and SEO 75
