@@ -4,8 +4,7 @@ body {
    background-repeat: no-repeat;
    background-size: cover;
    font-size: xx-large;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   font-weight: bold;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
    text-align: center;
    text-decoration-color: ivory;
    }
@@ -45,60 +44,42 @@ body {
  
 h1 {
   text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
 }
 
 .accordion {
-  width: 800px;
-  margin: 90px auto;
-  color: black;
-  background-color: #79c9f7;
-  padding: 45px 45px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
 }
 
-.accordion .container {
-  position: relative;
-  margin: 10px 10px;
+.accordion-item {
+  background-color: skyblue;
+  color:rgba(255, 255, 255);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgb(125, 154, 180);
 }
 
-.accordion .label {
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
   position: relative;
-  padding: 10px 0;
-  font-size: 30px;
-  color: black;
   cursor: pointer;
 }
 
-.accordion .label::before {
-  content: '+';
-  color: black;
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
   position: absolute;
-  top: 50%;
-  right: -5px;
-  font-size: 30px;
-  transform: translateY(-50%);
+  right: 1rem;
 }
 
-.accordion .content {
-  position: relative;
-  background: #79c9f7;
-  height: 0;
-  font-size: 20px;
-  text-align: justify;
-  width: 780px;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.accordion hr {
-  width: 100;
-  margin-left: 0;
-  border: 1px solid grey;
-}
-.accordion .container.active .content {
-  height: 150px;
-}
-
-.accordion .container.active .label::before {
-  content: '-';
-  font-size: 30px;
+.accordion-item-header.active::after {
+  content: "\2212"
 }
