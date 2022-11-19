@@ -1,137 +1,134 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-   background-image: url("grassandsky.jpg");
-   background-color: #ebcdcd;
-   background-repeat: no-repeat;
-   background-size: cover;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-   }
-   
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("sky.jpg");
+  background-color: #ebcdcd;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
 .topnav {
-  background-color: #5cb6eb;
-  overflow: hidden;
+ background-color: #5cb6eb;
+ overflow: hidden;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #1f1b1b;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+ float: left;
+ display: block;
+ color: #1f1b1b;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
 }
 
 .topnav a:hover {
-  background-color: #79c9f7;
-  color: rgb(255, 255, 255);
+ background-color: #79c9f7;
+ color: rgb(255, 255, 255);
 }
 
 .topnav a.active {
-  background-color: #79c9f7;
-  color: white;
+ background-color: #79c9f7;
+ color: white;
 }
 
 .topnav .icon {
-  display: none;
-}
- 
-h1 {
-  text-align: center;
-  margin: 2rem 0;
-  font-size: 2.5rem;
+ display: none;
 }
 
 .accordion {
-  width: 90%;
-  max-width: 1000px;
-  margin: 2rem auto;
+ width: 90%;
+ max-width: 1000px;
+ margin: 2rem auto;
 }
 
 .accordion-item {
-  background-color: rgb(28, 169, 224);
-  color:rgba(255, 255, 255);
-  margin: 1rem 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px 0 rgb(26, 129, 219);
+ background-color: rgb(28, 169, 224);
+ color:rgba(255, 255, 255);
+ margin: 1rem 0;
+ border-radius: 0.5rem;
+ box-shadow: 0 2px 5px 0 rgb(26, 129, 219);
 }
 
 .accordion-item-header {
-  padding: 0.5rem 3rem 0.5rem 1rem;
-  min-height: 3.5rem;
-  line-height: 1.25rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
+ padding: 0.5rem 3rem 0.5rem 1rem;
+ min-height: 3.5rem;
+ line-height: 1.25rem;
+ font-weight: bold;
+ display: flex;
+ align-items: center;
+ position: relative;
+ cursor: pointer;
 }
 
 .accordion-item-header::after {
-  content: "\002B";
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
+ content: "\002B";
+ font-size: 2rem;
+ position: absolute;
+ right: 1rem;
 }
 
 .accordion-item-header.active::after {
-  content: "\2212";
+ content: "\2212";
 }
 
 .accordion-item-body {
- max-height: 0;
- overflow: hidden;
- transition: max-height 0.2s ease-out;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
 }
 
 .accordion-item-body-content {
-  padding: 1rem;
-  line-height: 1.5rem;
-  border-top: 1px solid;
-  border-image: linear-gradient(to right, transparent, #1579dd, transparent) 1;
+ padding: 1rem;
+ line-height: 1.5rem;
+ border-top: 1px solid;
+ border-image: linear-gradient(to right, transparent, #1579dd, transparent) 1;
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 img {
-  max-width: 100%
+ max-width: 100%
 }
 
 .image {
-  flex-basis: 40%
+ flex-basis: 40%
 }
 
 .text {
-  font-size: 20px;
-  
+ font-size: 20px;
+ 
 }
 
-@media(max-width:767px) {
-  html {
-    font-size: 14px;
-  }
+@media screen and (min-width:768px) {
+ html {
+   font-size: 14px;
+ }
 }
-@media(max-width:500px) {
-  .container {
-      flex-direction: column-reverse;
-    }
-  .text {
-      color: whitesmoke;
-    }
+
+@media screen and (min-width:768px) {
+ .container {
+     flex-direction: column-reverse;
+ }
 }
-@media screen and (max-width:600px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-    
+
+@media screen and (min-width:600px) {
+ .topnav a {
+   float: none;
+   width: 100%;
+ }
 }
